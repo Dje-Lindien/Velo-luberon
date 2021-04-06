@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+    /* font-size: 15px; */
+}
+
+
+/* STYLE DU BOUTON JS remonter page  */
+.go_top a #cRetour{
+    border-radius:3px;
+    padding:10px;
+    font-size:15px;
+    text-align:center;
+    color:#fff;
+    background:rgba(0, 0, 0, 0.25);
+    position:fixed;
+    right:20px;
+    opacity:1;
+    z-index:99999;
+    transition:all ease-in 0.2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    text-decoration: none;
+    
+}
+.go_top a #cRetour:before{ content: "\25b2"; }
+.go_top a #cRetour:hover{
+    background:rgba(0, 0, 0, 1);
+    transition:all ease-in 0.2s;
+}
+.go_top a #cRetour.cInvisible{
+    bottom:-35px;
+    opacity:0;
+    transition:all ease-in 0.5s;
+}
+.go_top a #cRetour.cVisible{
+    bottom:20px;
+    opacity:1;
+}
+
+
+                /* SLIDER */
+
+
+#zoneTxt {
+    top: 10%;
+    left: auto;
+    right: 43%;
+}
+#zoneTxt2 {
+    top: 5%;
+    color: #e6232b;
+    font-style: italic;
+}
+#zoneTxt3 {
+    top: 10%;
+    left: 60%;
+    right: auto;
+    color: rgb(230, 141, 8);
+    line-height: 5vw;
+    font-style: italic;
+}
+#zoneTxt3 i {
+    color: rgb(9, 9, 12);
+}
+#zoneTxt img{
+    width: 25%;
+}
+#zoneTxt p {
+    color: #1d2f39;
+    text-align: left;
+}
+
+/* CATEGORIES de PRODUITS */
+
+.container_thumbnails-menu img {
+    height: 200px;
+    width: 240px;
+    margin: 3vh;
+}
+
+.container_thumbnails-menu img:hover {
+    transform: scale(1.05);
+}
+
+#jumbo {
+    background-color:#1d2f39;
+    color: white;
+}
+
+
+/*BLOG + APPLIS CONSEILLEES*/
+
+#appli h3 {
+    text-align: right;
+}
+
+#appli ul {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+#appli ul img {
+    max-width: 180px;
+    max-height: 70px;
+    padding: 8px 0 8px 0;    
+}
+
+
+/* CONNEXION/INSCRIPTION.PHP  */
+
+.bg_connexion {
+    height: 1170px;
+}
+.texte .titre {
+    margin-top: 5vh;
+    font-size: 4.4rem;
+}
+.texte .titre h6 a {
+    text-decoration: none;
+}    
+
+#form_connexion {
+    padding: 4vh;
+    text-align: center;
+}
+
+#form_connexion .form-group {
+    padding: 2vh;
+}
+
+#form_connexion .form-group input{
+    font-size: 1.5rem;
+}
+#form_connexion button#conn_inscr span {
+    font-size: 3vh;
+}
+
+
+    /* PAGEADMIN.HTML.PHP */
+
+#page_admin_bloc {
+    margin-top: 8rem;
+    margin-bottom: 50rem;
+}
+
+#page_admin_bloc .row {
+    height: 24rem;
+}
+
+#bloc_txt button {
+    background: #1d2f39;
+}
+
+#bloc_txt button a {
+    color: rgb(217, 239, 248);    
+}
+
+
+
+/* PAGE_USER.HTML.PHP (qui regroupe page_user.php)  */
+
+#form-user-modif {
+    font-size: 1.2rem;
+}
+
+
+/* NEW-BLOG.HTML.PHP  */
+
+button a {
+    text-decoration: none;
+}
+
+
+/* BLOG_WEB.PHP  */
+
+.bg-color #bg-div .row{
+    height: 320px;
+}
+
+#bg-div .row {
+    color: #1d2f39;
+    height: 190px;
+    /* background: linear-gradient(-30deg, grey 0%, white 30%, white 50%, white 100%); */
+    /* filter: hue-rotate(100deg); */
+    overflow: hidden;
+}
+
+#bg-button {
+    background-color:  #1d2f39;
+}
+
+#bg-button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* CATALOGUE.PHP  */
