@@ -1,0 +1,85 @@
+
+/* BACKGROUND  */
+
+#background {
+    top: 0;
+    left: 0;
+    height: auto;
+    /* width: auto; */
+    background: linear-gradient(150deg , #fff 0%, #fff 65%,  #22628557 65%,  #22628557 100%);
+    opacity: 2;
+    position: sticky;
+}
+
+.produit_prst {
+    height: 100%;
+    border: 2px solid red;
+}
+
+
+/* IMAGE PRODUIT  */
+
+#img-page_produit {
+    min-width: 550px;
+    max-width:620px;
+    max-height:360px;
+    min-height: 300px;
+}
+
+/* #text-display_produit p { */
+    /* font-size: 1.2rem;
+    height:240px; width:450px; */
+/* } */
+
+#text-display_produit label {
+    font-size: 7vh;
+}
+
+
+/* BOUTON  */
+
+#display_produit button {
+    width: 170px;
+    font-size: 1.1rem;
+
+}
+/* CARACTERISTIQUES  */
+
+#caracteristiques {
+    padding: 4px;
+    text-align: left;
+}
+
+#caracteristiques li {
+    list-style: none;
+    line-height: 1.7rem;
+    max-width: 260px;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    color: #2b2d2e;
+}
+
+#caracteristiques li.c1 {
+    background-color: lightgray;
+    opacity: 2;
+    /* max-width: 10rem; */
+}
+
+#caracteristiques li.c2 {
+    background-color: lightgoldenrodyellow;
+    opacity: 2;
+
+    /* max-width: 10rem; */
+}
+
+
+/* PAYMENT PNG  */
+
+#payment {
+    margin: 20vh 0 -22vh 0; 
+}
+
+#payment img {
+    max-width: 40%;
+    min-width: 200px
+}
