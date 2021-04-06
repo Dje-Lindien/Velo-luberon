@@ -1,0 +1,74 @@
+
+/* NAVBAR */
+
+.navbar {
+    background-color: #1d2f39;
+}
+
+nav ul a i {
+    font-size: 1.4rem;
+    color: white;
+    vertical-align: middle;;
+    word-spacing: 2rem;
+}
+
+nav ul #panier-bg-color {
+    background-color: white;
+    padding: 0 0.9rem 0.1rem 0.6rem;
+    border-radius: 2.8rem;
+}
+#panier-bg-color i {
+    color: #1d2f39;
+
+}
+
+#nombre_panier {
+    font-size: 1.7rem;
+    /* text-align: center; */
+    padding: 0 0 0.1rem 2rem;
+    border-radius: 1.8rem;
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+div#decon {
+    margin-right: 40px;
+    /* color: #1d2f39;
+    background-color: #e6232b; */
+}
+
+
+
+/* #search_panier a i {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 100;
+    /*width: 4rem; */
+
+
+
+    /* FOOTER */
+
+footer {
+    margin-top: 15rem;
+    bottom: 0;
+    background-color: #1d2f39;
+    /* position: sticky; */
+}
+footer div ul li a {
+    text-decoration: none;
+    color: white;
+    /* font-size: 1.2rem; */
+    font-size: 1.5rem;
+}
+
+
+/* ATTENTION C'EST VALABLE POUR TON HEADER FOOTER ! */
+li {
+    margin-right: 2.4rem;
+}
+
