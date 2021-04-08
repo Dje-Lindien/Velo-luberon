@@ -7,13 +7,7 @@ window.onscroll = function() {
     document.getElementsByClassName("navbar").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
-// } 
-
-
-// // Pour masquer la division :
-// document.getElementById("formulaire").style.display = none;
-// // /Pour afficher la division :
-// document.getElementById("formulaire").style.display = block;
+} 
 
 
 //  Scroll haut de page 
@@ -38,16 +32,3 @@ let d1 = document.getElementById("d1");
           d1.style.display = "block";
       }
   })
-
-
-  // let click_cat = document.getElementById("click_cat");
-  // let cats = document.getElementById("cats");
-
-  //   click_cat.addEventListener("click", () => {
-  //     if(getComputedStyle(cats).display != "none") {
-  //       cats.style.display = "none";
-  //     } else {
-  //       cats.style.display = "block";
-  //     }
-  //   })
-
