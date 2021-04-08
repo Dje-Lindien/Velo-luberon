@@ -15,13 +15,8 @@ if(isset($idAdmin) != 1) {
 
 }
 
-
-// var_dump($_SESSION['idUser']);
-// var_dump($_GET);
-// var_dump($idAdmin);
-
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,9 +37,6 @@ if(isset($idAdmin) != 1) {
   </head>
 
 <body>
-
-
-
 
 
 <!-- NAVBAR HEADER -->
@@ -92,10 +84,6 @@ if(isset($idAdmin) != 1) {
     </div>
 
 </div>    
-
-
-    
-
 
 
 <!-- FOOTER -->
