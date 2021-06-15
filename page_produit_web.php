@@ -93,7 +93,7 @@ if(isset($_POST['add'])) {
                     id="bouton_retour">
                 <i class="fas fa-backward"></i>
                 <a style="text-decoration:none ; color:#e6232b" 
-                    href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Retour
+                    href="catalogue.php">Retour
                 </a>
             </button>
         </div>
