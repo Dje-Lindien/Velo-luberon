@@ -6,12 +6,12 @@
 
     <nav class="navbar navbar-expand justify-content-between py-1">
         <a class="navbar-brand" href="index.php">
-            <img class="logo" src="libraries/img/logo_mondovelo.jpg" width="116" height="54" alt="" loading="lazy">
+            <img class="logo" src="libraries/img/logo_mondovelo.jpg" max-width="116" height="54" alt="" loading="lazy">
         </a>
 
         <ul class="navbar-nav d-flex align-items-center">
 
-            <li class="nav-item d-none d-xl-block">
+            <!-- <li class="nav-item d-none d-xl-block">
                 <div id="d1">
                     <form class="form-inline" action="/page_produit_web.php" method="get">
                         <fieldset>    
@@ -32,7 +32,7 @@
                         </fieldset> 
                     </form>
                 </div>
-            </li>
+            </li> -->
 
             <li class="nav-item d-none d-sm-block">
                 <a class="nav-link align-baseline" id="togg1" href="#recherche"><i class="fas fa-search"></i></a>
