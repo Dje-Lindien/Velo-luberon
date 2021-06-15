@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 require_once('libraries/database.php');
 require_once('libraries/utils.php');
@@ -11,6 +11,7 @@ $blogs = $pdo->prepare('SELECT * FROM blog ORDER BY RAND() LIMIT 1');
 $blogs->execute();
 
 $blog = $blogs->fetch();
+
 ?> 
 
 
@@ -94,7 +95,7 @@ $blog = $blogs->fetch();
     <div class="row justify-content-around">
 
         <div class="col-auto my-2">
-            <div class="card p-3" style="width: 23rem; height: 29rem">
+            <div class="card p-3" style="max-width: 23rem; height: 29rem; margin: auto">
                 <div  style="height: 222px" >
                     <img src="libraries/img/velo2.jpg" class="img-fluid card-img-top m-1" style="max-height: 222px" alt="">
                 </div>
@@ -106,8 +107,8 @@ $blog = $blogs->fetch();
         </div>
     
         <div class="col-auto my-2">
-            <div class="card p-3" style="width: 23rem; height: 29rem">
-                <div  style="height: 222px" >
+            <div class="card p-3" style="max-width: 23rem; height: 29rem; margin: auto">
+                <div style="height: 222px">
                     <img src="libraries/img/velo3.jpg" class="img-fluid card-img-top m-1" style="max-height: 222px" alt="">
                 </div>
                 <div class="card-body d-flex flex-column">
@@ -118,7 +119,7 @@ $blog = $blogs->fetch();
         </div>
 
         <div class="col-auto my-2">
-            <div class="card p-3" style="width: 23rem; height: 29rem">
+            <div class="card p-3" style="max-width: 23rem; height: 29rem; margin: auto">
                 <div  style="height: 222px" >
                     <img src="libraries/img/velo4.jpg" class="img-fluid card-img-top m-1" style="max-height: 222px" alt="">
                 </div>
@@ -136,56 +137,59 @@ $blog = $blogs->fetch();
 
 
 <!-- CATEGORIES - fixe -->
-<?= $cat = categories(); ?>;
+<?= $cat = categories(); ?>
 
 
 <!-- ESPACE BLANC --> <div class="container_espace" style="height:8vh;"></div> 
 
 
 <!-- BLOG & APPLIS CONSEILLEES -->
-<div class="container-fluid d-flex justify-content-evenly col-md-10">
+<div id="blog-appli" class="container-fluid">
+    <div class="d-sm-flex justify-content-evenly col-md-10 offset-md-1">
 
-<!-- Blog  -->
-    <?php
-        $nbimages=4;
-        
-        $nomimages[1]=$blog['photo'];
-        $nomimages[2]=$blog['photo'];
-        $nomimages[3]=$blog['photo'];
-        $nomimages[4]=$blog['photo'];
 
-        srand((double)microtime()*1000000);
+    <!-- Blog  -->
+        <?php
+            $nbimages=4;
+            
+            $nomimages[1]=$blog['photo'];
+            $nomimages[2]=$blog['photo'];
+            $nomimages[3]=$blog['photo'];
+            $nomimages[4]=$blog['photo'];
 
-        $affimage=rand(1,$nbimages);
+            srand((double)microtime()*1000000);
 
-    ?>
+            $affimage=rand(1,$nbimages);
+        ?>
 
-    <div class="col-md-5" id="blog_lien">
-        <h3>Retrouver les dernières infos</h3>
-        <small class="pb-3" style="font-style: italic;">Vélolubeon vous fournit du contenu sportif en avant-première !</small>
-        <a href="blog_web.php" value="">
-            <div class="text-center" style="max-width:100%; height:350px">
-                <img class="rounded shadow img-fluid mt-3" src="libraries/img/<?php echo $nomimages[$affimage];?>" style="max-height: 400px">
+        <div class="col-md-5" id="blog_lien">
+            <h3>Retrouver les dernières infos</h3>
+            <small class="pb-5" style="font-style: italic; text-align: center">Véloluberon vous fournit du contenu sportif en avant-première !</small>
+            <a href="blog_web.php">
+                <div class="text-center" style="max-width:100%; height:350px">
+                    <img class="rounded shadow img-fluid mt-3" src="libraries/img/<?php echo $nomimages[$affimage];?>" style="max-height: 400px">
+                </div>
+            </a>
+        </div>
+
+        <span class="d-none d-sm-block" style="border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 7px 3px 3px grey; margin: 0 50px"></span>
+
+    <!-- Applis adviced  -->
+        <div class="col-md-5" id="appli">
+            <h3 class="pb-5">Top 5 des applications sportives<br>conseillées par Vélo luberon</h3>
+            <div id="appli_bg">
+                <ul class="text-center">
+                    <p><img src="libraries/img/LOGO.png" class="" alt=""></p>
+                    <p><img src="libraries/img/garmin.png" class="" alt=""></p>
+                    <p><img src="libraries/img/rmc.png" class="" alt=""></p>
+                    <p><img src="libraries/img/runtopia.jpg" class="" alt=""></p>
+                </ul>
             </div>
-        </a>
-    </div>
-
-    <span style="border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 7px 3px 3px grey; margin: 0 50px"></span>
-
-<!-- Applis adviced  -->
-    <div class="col-md-5" id="appli">
-    
-        <h3 class="pb-5">Top 5 des applications sportives<br>conseillées par Vélo luberon</h3>
-        <div id="appli_bg">
-            <ul class="text-center">
-                <p><img src="libraries/img/LOGO.png" class="" alt=""></p>
-                <p><img src="libraries/img/garmin.png" class="" alt=""></p>
-                <p><img src="libraries/img/rmc.png" class="" alt=""></p>
-                <p><img src="libraries/img/runtopia.jpg" class="" alt=""></p>
-            </ul>
         </div>
     </div>
 </div>
+
+
 
 
 <!-- FOOTER -->
