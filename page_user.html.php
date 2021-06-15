@@ -33,6 +33,7 @@ require_once('page_user.php');
 
 <div class="mx-7">
     <div class="w-50 py-1 px-4 my-4 text-right" style="background-color: #e6232b;">
+        
         <h2 style="color:antiquewhite;">Edition de profil</h2>
         <span class="border-bottom"></span>
     </div>
@@ -43,7 +44,7 @@ require_once('page_user.php');
 
 
 <div id="form-user-modif" class="container-fluid row justify-content-center">
-    <div class="col-7">
+    <div class="col-11 col-sm-7">
 
         <form method = "POST" action = "">
             <?php foreach ($infos as $info) { ?>
@@ -99,7 +100,7 @@ require_once('page_user.php');
                 </div>
         
                 <div class="col-12 justify-content-around my-auto">
-                    <input class="col-6 offset-2 btn btn-light border mt-4" type = "submit" action="" value = "Mettre à jour mon profil" name = "modifSubmit">
+                    <input class="col-10 offset-2 btn btn-light border mt-4" type = "submit" action="" value = "Mettre à jour mon profil" name = "modifSubmit">
                 </div>
         </form>
     </div>
