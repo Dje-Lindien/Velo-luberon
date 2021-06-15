@@ -52,13 +52,11 @@ if(isset($_POST['remove'])) {
   <div class="sous-le-header">
     <div class="d-flex align-items-start flex-column bd-highlight mb-5"
         style="height: auto">
+        
         <button class="btn mb-auto p-1 align-items-center m-2"
-                style="font-size:1.1rem ; background-color:white ; color:#e6232b ; border:solid 3px #1d2f39"
-                id="bouton_retour">
-            <i class="fas fa-backward"></i>
-            <!-- <a style="text-decoration:none ; color:#e6232b" 
-                href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Retour
-            </a> -->
+                style="font-size:1.1rem ; background-color:white ; border:solid 3px #1d2f39"
+                id="bouton_retour" value="catalogue.php"><a href="catalogue.php" style="color:#e6232b">
+            <i class="fas fa-backward"></i></a>
         </button>
     </div>
 </div>
@@ -85,7 +83,8 @@ if(isset($_POST['remove'])) {
     <!-- ESPACE BLANC --> <div class="container_espace rounded" style="height:2vh; background-color:#e6232b; margin-bottom: 2vh;"></div>  
 
                     <?php
-                        $total = 0;
+
+                    $total = 0;
 
                         if(isset($_SESSION['panier'])) {
                             $panierItem_id = array_column($_SESSION['panier'], 'panier_id');
@@ -97,19 +96,19 @@ if(isset($_POST['remove'])) {
                                         itemElement($produit['libelle'], $produit['prix_produit'], $produit['photoP'], $produit['prod_id']);
                                         
                                         $total = $total + (int)$produit['prix_produit'];
+                                    
                                     }                       
                                 }
                             }
 
                         }else{
+
                             echo "<h5>Le panier est vide !</h5>";
                         }
-
                     ?>
 
                 </div>
             </div>
-
             <div class="row justify-content-end">
                 <div class="col-md-6  border rounded mt-5">
                     <div class="pt-4">
@@ -136,6 +135,7 @@ if(isset($_POST['remove'])) {
                                 <h5 class="text-success">GRATUIT</h5>
                                 <hr>
                                 <h5>€<?php echo $total; ?></h5>
+                                
                             </div>
                         </div>
                     </div>
@@ -159,11 +159,10 @@ if(isset($_POST['remove'])) {
 <!-- FOOTER -->
 <?php require 'footer.php' ?>
 
-
 <!-- FIN DE PAGE -->
 
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  
 </body>
 </html>
