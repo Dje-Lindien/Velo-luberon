@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require_once('libraries\database.php');
-require_once('libraries\utils.php');
+require_once('libraries/database.php');
+require_once('libraries/utils.php');
 require_once('component.php');
 
 //We get the data from the cart
@@ -28,7 +28,6 @@ if(isset($_POST['add'])) {
         
         //On créé une variable de SESSION pour pouvoir mettre les id des produits dans le panier
         $_SESSION['panier'][0] = $item_array;
-        print_r($_SESSION['panier']);
     }
 }
 
@@ -96,8 +95,8 @@ if(isset($_POST['add'])) {
     <div class="row text-center py-8">
         <!-- DISPLAY PRODUCTS (need a function) -->
             <div class="container">
-                <div class="row text-center py-5">
-
+                <div class="d-flex flex-wrap px-3">
+<!-- row text-center py-5  -->
                     <?php
                         //FuNCTION to call
                         $produits = getData();
