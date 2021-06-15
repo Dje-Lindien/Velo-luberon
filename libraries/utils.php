@@ -85,7 +85,7 @@ function categories() {
             </div>
             <hr>
         </div>
-    \"</div>";
+    </div>";
 
     echo $cat;
 
