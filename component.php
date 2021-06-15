@@ -4,11 +4,12 @@
 function component($libelle, $prix, $photoP, $prod_id) {
     
     $element =
-    "<div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
+    "<div class=\"col-lg-3 col-md-6 col-sm-10 my-3 my-md-0\">
     <a href=\"page_produit_web.php?id=$prod_id\" style=\"text-decoration: none; color: black\">
         <form action=\"catalogue.php\" style=\"width: 20rem\" method=\"POST\">
-            <div class=\"card shadow mx-4 my-5\" style=\"height:491px\">
-                <div><img src=\"libraries/img/$photoP\" style=\"max-height: 200px\" class=\"img-fluid card-img-top my-3 w-auto\">
+            <div class=\"card shadow mx-4 my-5\" style=\"height:491px ; width:290px\">
+                <div>
+                    <img src=\"libraries/img/$photoP\" style=\"max-height: 200px; max-width: 270px\" class=\"img-fluid card-img-top my-3 w-auto\">
                 </div> 
                 <div class=\"card-body d-flex flex-column justify-content-end\">
                     <h5 class=\"card-title\">$libelle</h5>
